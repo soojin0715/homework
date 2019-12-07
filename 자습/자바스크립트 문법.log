@@ -1,0 +1,8 @@
+let myemail='sparta@gmail.com'
+undefined
+myemail.split('@')
+(2) ["sparta", "gmail.com"]
+myemail.split('@')[1]
+"gmail.com"
+myemail.split('@')[1].split('.')[0]
+"gmail"

@@ -1,0 +1,223 @@
+<html>
+<!-- HTML에 이 부분을 추가하고 -->
+<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <head>
+        <title>종합감기약</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<script src="http://spartacodingclub.shop/order">
+  
+</script>
+
+<script>
+   
+    $(document).ready(function(){
+      $('#orders-box').html('');
+      listing();
+    });
+
+ 
+    
+</script>
+
+        <style>
+          .mytitle {
+            color: white;
+            text-align: center;
+            
+
+  background-image: url(
+http://www.sobilife.com/news/photo/201404/4878_2115_1357.jpg);
+
+            background-size: cover;
+            background-position: center;
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+    
+            /* display flex를 쓸 때엔 아래 네 줄이 항상 묶여 다닙니다. */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+    
+          .mytitle > h1 {
+            margin: 0 0 20px 0;
+          }
+    
+          .mytitle > h5 {
+            margin: 5px 0 0 0;
+          }
+    
+          .wrap {
+            width: 500px;
+            margin: 50px auto 0 auto;
+          }
+    * {
+  font-family: 'Jua', sans-serif;
+}
+        </style>
+
+
+ <script>
+      function q1() {
+        $('#names-q1').html('');
+        $.ajax({
+          type: "GET",
+          url: "http://spartacodingclub.shop/order",
+          data: {},
+          success: function(response){
+              let rows = response["orders"]["row"];
+              for (let i = 0; i < rows.length; i++) {
+                let name = rows[i]['name'];
+                let count = rows[i]['count'];
+                let address = rows[i]['address'];
+                let phone = rows[i]['phone'];
+                let temp_html = '<tr>\
+                                  <td>'+name+'</td>\
+                                  <td>'+count+'</td>\
+                                  <td>'+address+'</td>\
+                                  <td>'+phone+'</td>\
+                                </tr>'
+                $('#names-q1').append(temp_html);
+              }
+            }
+          })
+      }
+    </script>
+
+
+
+
+    </head>
+    <body>
+        <div class="wrap">
+          <div class="mytitle">
+            
+          </div>
+
+<div class="pricing-header px-4 py-4 pt-md-6 pb-md-5">
+  
+
+      <h3 class="display-4">세상 어디에도 없던 감기약이 왔다</h3>
+     
+
+<div class="pricing-header px-4 py-4 pt-md-6 pb-md-5">
+     
+      <h1 class="display-4">특별한 감기약</h1> <p class="lead">KRW 10,000</p>
+
+    </div>
+
+    </div>
+         
+
+           <p>
+            감기 바이러스는 수백가지! 그래서 그동안 감기를 완벽히 낫게해주는 감기약은 볼 수 없었죠? 놀라지 마세요! 국내 연구진이 개발한 최초의 감기약 드디어 판매 개시 
+            
+          </p>
+<hr class="mb-4">
+<div class="col-md-8 order-md-1">
+          <h3 class="mb-3">주문하기 </h3>
+          <form class="needs-validation" novalidate="">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">주문자성함:</label>
+                <input class="form-control" id="firstName" required="" type="text" placeholder="" value="">
+             <p></p>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">수량:      </label>
+              
+<select class="form-control" id="lastName" required="" type="text" placeholder="" value="">
+            <option selected=""> -- 수량을 선택하세요 -- </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+
+
+
+
+        <!--   <div class="col-md-6 mb-3">
+                <label for="lastName">수량:      </label>
+                <input class="form-control" id="lastName" required="" type="text" placeholder="" value="">
+
+<select class="custom-select" id="order_count">
+            <option selected=""> -- 수량을 선택하세요 -- </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select> -->
+                <p></p>
+
+
+            </div>
+
+<div class="col-md-6 mb-3">
+                <label for="lastName">전화번호:</label>
+                <input class="form-control" id="lastName" required="" type="text" placeholder="" value="">
+                <p></p>
+                
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName">주소:</label>
+                <input class="form-control" id="lastName" required="" type="text" placeholder="" value="">
+                <p></p>
+            </div>
+           
+                
+            <hr class="mb-4">
+            <div class="custom-control custom-checkbox">
+              <input class="custom-control-input" id="same-address" type="checkbox">
+              <label class="custom-control-label" for="same-address">주문 내용을 확인하였습니다.</label>
+            </div>
+            
+              
+            <p>
+            </p>
+            
+          
+          <button class="mybtn">구매하기</button>
+        </div>
+<div>
+  <p>
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+
+</div>
+
+<div class="orders">
+
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">이름</th>
+      <th scope="col">수량</th>
+      <th scope="col">주소</th>
+      <th scope="col">전화번호</th>
+    </tr>
+  </thead>
+
+<tbody id="names-q1">
+
+ 
+  </tbody>
+</table>
+</div>
+
+
+
+
+
+        
+    </body>
+    </html>
+
+
